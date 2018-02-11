@@ -46,6 +46,8 @@ oieao
 
 
 
+sybase_deadlock_retry_countaeaiu
+nredtaiutred
 
 
 
