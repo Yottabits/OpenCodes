@@ -8,8 +8,6 @@ For the OpenCodes Hackathon at ZKM
 
 # andre
 
-![[NYANCAT](http://img.youtube.com/vi/QH2-TGUlwu4/0.jpg)](http://www.youtube.com/watch?v=QH2-TGUlwu4)
-=======
 ## Weitere Ideen:
 - Jodelintegration
 - Merchandise
