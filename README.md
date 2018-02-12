@@ -17,7 +17,9 @@ For the OpenCodes Hackathon at ZKM
 | andre  | 99999999                |   |   |   |
 | georg  | 0                       |   |   |   |
 
+
 # max
+
 hats drauf
 
 aiednaiu
