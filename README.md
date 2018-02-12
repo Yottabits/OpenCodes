@@ -16,3 +16,8 @@ For the OpenCodes Hackathon at ZKM
 | dome   | 0.3                     |   |   |   |
 | andre  | 99999999                |   |   |   |
 | georg  | 0                       |   |   |   |
+
+
+# max
+
+hats drauf
