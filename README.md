@@ -19,3 +19,7 @@ For the OpenCodes Hackathon at ZKM
 
 # max
 hats drauf
+
+aiednaiu
+aiueaiutrneiu
+auistreiosurnt
