@@ -8,3 +8,10 @@ For the OpenCodes Hackathon
 
 # andre
 [wikipedia](wikipedia.com)
+
+
+| Name   | Coolness der Bettwäsche |   |   |   |
+|--------|-------------------------|---|---|---|
+| dome   | 0.3                     |   |   |   |
+| andre  | 99999999                |   |   |   |
+| georg  | 0                       |   |   |   |
