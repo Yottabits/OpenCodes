@@ -22,3 +22,7 @@ For the OpenCodes Hackathon at ZKM
 
 
 # max
+hats drauf
+
+
+# last team member still unknows
