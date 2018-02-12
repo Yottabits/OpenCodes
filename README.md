@@ -1,7 +1,7 @@
 # OpenCodes
-For the OpenCodes Hackathon
+For the OpenCodes Hackathon at ZKM
 
-## Erste Ideen am Whiteboard in der WG Küche
+## Erste Ideen am Whiteboard in der WG
 
 ![alt text](System/FirstIdear.jpeg)
 
