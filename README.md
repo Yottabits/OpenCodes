@@ -6,8 +6,8 @@ For the OpenCodes Hackathon at ZKM
 ![alt text](System/FirstIdear.jpeg)
 
 
-## andre
-# Weitere Ideen:
+# andre
+## Weitere Ideen:
 - Jodelintegration
 - Merchandise
 - Rückmeldebogen
