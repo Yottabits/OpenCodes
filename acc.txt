@@ -3,5 +3,6 @@ User: yottabytes
 Pw: fFb80*r1
 
 FTP:
+HOST: djk96.rocks
 User: yottabytes
 Pw: s80dQ^f7
