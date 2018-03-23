@@ -15,7 +15,7 @@ camelCase()
 first letter small next Word big
 
 #Variable Names
-*talking* names,  Only  one Sense
+*talking* names,  Only one Sense
 Iterators are fine as i or j
 for Complex Numbers use j as imaginary part :)
 CamelCase
