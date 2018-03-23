@@ -1,0 +1,36 @@
+#File Names
+small only use underscores "_" if needed
+max 200lines if possible
+exception: GIThub files - LICENSE und README.md
+
+#tabs
+8 spaces represent one tab (Atom Settings at the very bottom)
+
+#Function Names
+kamelCase()
+first letter small next Word big
+
+#VariableNames
+*talking* names
+KamelCase
+first Letter Big next Word big
+
+#brackets
+if(Condition){
+        one Indent!
+}elseif(){
+        aea
+}else{
+
+}
+
+for(){
+        #naetnd
+}
+
+while(){
+        #ane
+}
+
+#Comments
+Use as less as possible use understandable Code

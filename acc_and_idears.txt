@@ -1,0 +1,18 @@
+MYSQL:
+#Access maybe only over plesk possible - cause of localhost only settings - ask dome how to use
+URL:  https://djk96.rocks:8443/domains/databases/phpMyAdmin/index.php?db=dk_meet2eat
+User: yottabytes
+Pw: fFb80*r1
+
+FTP:
+HOST: djk96.rocks
+User: yottabytes
+Pw: s80dQ^f7
+
+
+Jodel Account
+{u'is_legacy': False, u'access_token': u'41061617-c6e69d42-3c03190b-b9c9-4eb6-b673-8ff2ba642733', u'expiration_date': 1522145861, u'distinct_id': u'5ab0dfc557ad5f00155915ea', u'device_uid': u'fb186b5375c378f1b34bc6fdc1c22aa72f4929f0e7a62b0a64fb009f4c7ae781', u'refresh_token': u'5ac08fce-4cbe-4356-b3ce-95c5d4465ce5'}
+
+
+Links:
+https://github.com/nborrmann/jodel_api

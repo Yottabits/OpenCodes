@@ -6,6 +6,9 @@
   <p>
     hello World
     alles wieder gut
+    <?php
+    echo "hello World";
+    ?>
   </p>
 </body>
 </html>

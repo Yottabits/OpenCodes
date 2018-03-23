@@ -1,9 +1,0 @@
-MYSQL:
-URL: https://djk96.rocks:8443/domains/databases/phpMyAdmin/index.php?db=dk_meet2eat
-User: yottabytes
-Pw: fFb80*r1
-
-FTP:
-HOST: djk96.rocks
-User: yottabytes
-Pw: s80dQ^f7
