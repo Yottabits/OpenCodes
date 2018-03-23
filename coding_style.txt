@@ -1,18 +1,20 @@
 #File Names
-small only use underscores "_" if needed
+small only
+use underscores "_" if needed
 max 200lines if possible
 exception: GIThub files - LICENSE und README.md
+Folders follow the same rules
 
 #tabs
 8 spaces represent one tab (Atom Settings at the very bottom)
 
-#Function Names
-kamelCase()
+#Function and Method Names
+camelCase()
 first letter small next Word big
 
-#VariableNames
-*talking* names
-KamelCase
+#Variable Names
+*talking* names, oneusage
+CamelCase
 first Letter Big next Word big
 
 #brackets
@@ -23,14 +25,30 @@ if(Condition){
 }else{
 
 }
-
 for(){
         #naetnd
 }
-
 while(){
         #ane
 }
 
 #Comments
-Use as less as possible use understandable Code
+Use as less as possible - use understandable Code instead
+Use Block Comments only for testing, not in final Code
+
+#general
+        - Use English only
+        - Do not use Switch Case Statements
+        - Use talking Variables instead of long Conditions
+        - design according to Material Design Rules if possible
+        - Use only funny Errors-Messages!
+
+#Language Focused
+
+        #SQL
+
+        #HTML
+
+        #CSS
+
+        #PHP
