@@ -29,7 +29,9 @@
          if ($row = $result->fetch_array(MYSQLI_BOTH)) {
                 echo("<h3>Location_ID: ".$row['ID']."</h3>");
                 //to use as selector what to show in other scripts
-                $LocationID = $row['ID'];
+                $Location_ID = $row['ID'];
+        }else {
+                echo("Error wrong UrlCode");
         }
  }else{
         echo("<h1>No GET UrlCode -> not scanned tag!!</h1> <br>");
