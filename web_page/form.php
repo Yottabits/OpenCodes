@@ -55,51 +55,35 @@ $(document).ready(function() {
         // Get the form.
         var form = $('#AjaxLocationSettingsForm');
 
-        // Get the messages div.
-        var formMessages = $('#form-messages');
+        // Set up an event listener for the contact form.
+        $(form).submit(function(event) {
+            // Stop the browser from submitting the form.
+            event.preventDefault();
+            console.log("triggered event listener")
 
-        // Serialize the form data.
-        var formData = $(form).serialize();
+//Tode hier muss die Location_ID noch rein kommen
 
-        // Submit the form using AJAX.
-        $.ajax({
-            type: 'POST',
-            url: $(form).attr('action'),
-            data: formData
-        }).done(function(response) {
-    // Make sure that the formMessages div has the 'success' class.
-    $(formMessages).removeClass('error');
-    $(formMessages).addClass('success');
+            var formData = {
+                    'Location_ID'       :0,
+                    'Topic'                      : document.getElementById('Topic').value,
+                    'WhoIsHere'             :  document.getElementById('WhoIsHere').value,
+                    'Message'                  : document.getElementById('Message').value,
+                    'FreeSeats'                 :document.getElementById('FreeSeats').value
+        };
 
-    // Set the message text.
-    $(formMessages).text(response);
-
-    // Clear the form.
-    $('#name').val('');
-    $('#email').val('');
-    $('#message').val('');
-}).fail(function(data) {
-    // Make sure that the formMessages div has the 'error' class.
-    $(formMessages).removeClass('success');
-    $(formMessages).addClass('error');
-
-    // Set the message text.
-    if (data.responseText !== '') {
-        $(formMessages).text(data.responseText);
-    } else {
-        $(formMessages).text('Oops! An error occured and your message could not be sent.');
-    }
+        console.log(formData);
+            // Submit the form using AJAX.
+            $.ajax({
+                type: 'POST',
+                url: $(form).attr('action'),
+                data: formData
+        }).done(function(data) {
+                    console.log(data)
+            });
+        });
 });
 
-});
 
-// Set up an event listener for the contact form.
-$(form).submit(function(event) {
-    // Stop the browser from submitting the form.
-    event.preventDefault();
-
-    // TODO
-});
 
 </script>
 
@@ -129,7 +113,7 @@ $(form).submit(function(event) {
                 </div>
                 <div class="row">
                         <div class="input-field col s12">
-                            <select>
+                            <select id="FreeSeats">
                               <option value="" disabled selected>How many seats are free?</option>
                               <option value="0">No more Seats</option>
                               <option value="1">1 Seat</option>
