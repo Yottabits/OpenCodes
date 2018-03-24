@@ -3,7 +3,7 @@
 <head>
   <!--Import Google Icon Font-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="css/custom.css" rel="stylesheet">
+  <link href="/css/custom.css" rel="stylesheet">
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
   <!-- Compiled and minified JavaScript -->
@@ -14,8 +14,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
 <!--Own JS-->
-  <script src="js/ajax.js"></script>
-  <script src="js/settings.js"></script>
+  <script src="/js/ajax.js"></script>
+  <script src="/js/settings.js"></script>
 <!--<script src="js/map.js"></script>-->
 
 </head>
@@ -37,12 +37,11 @@
 
   <?php
       if(isset($_GET['UrlCode']){
-              include 'location_scan.php' ;
+              include '/location_scan.php' ;
       }else{
-              include 'settings.php';
-              include 'map_and_list.php';
+              include '/settings.php';
+              include '/map_and_list.php';
       }
-
 ?>
 
 <!--
