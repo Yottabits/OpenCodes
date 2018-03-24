@@ -1,4 +1,40 @@
 <div id="Settings", class="fill", style="display:none">
+
+<script>
+//autocomplete
+$(document).ready(function(){
+  $('input.autocomplete').autocomplete({
+    data: {
+            <?php
+                        $servername = "localhost";
+                        $username = "yottabytes";
+                        $password = "fFb80*r1";
+
+                        // Create connection
+                        $conn = new mysqli($servername, $username, $password);
+
+                        // Check connection
+                        if ($conn->connect_error) {
+                                die("DK hats verkackt: " . $conn->connect_error);
+                        }else{
+                                //echo "Connected successfully";
+                        }
+
+                        $sql = "SELECT * from dk_meet2eat.Topics";
+                        $result = $conn->query($sql);
+
+                        while ($row = $result->fetch_array(MYSQLI_BOTH)) {
+                               //Example "Apple": null,
+                                echo("\"".$row['Name']."\":null,");
+                        }
+
+            ?>
+      },
+  });
+});
+</script>
+
+
 <input type="text" id="LocationIDHiddenInput" value="<?php echo $Location_ID ?>" style="display:none">
 <form id="AjaxLocationSettingsForm" method="post" action="update_location.php">
 <div class="row">
@@ -6,21 +42,21 @@
                 <div class="row">
                         <div class="input-field col s12">
                                 <i class="material-icons prefix">forum</i>
-                                <input type="text" id="Topic" class="autocomplete">
+                                <input type="text" id="Topic" class="autocomplete" autocomplete="off">
                                 <label for="Topic">topic of conversation</label>
                         </div>
                 </div>
                 <div class="row">
                         <div class="input-field col s12">
                                 <i class="material-icons prefix">supervisor_account</i>
-                                <textarea id="WhoIsHere" class="materialize-textarea" data-length="120"></textarea>
+                                <textarea id="WhoIsHere" class="materialize-textarea" data-length="120" autocomplete="off"></textarea>
                                 <label for="WhoIsHere">WhoIsHere</label>
                         </div>
                 </div>
                 <div class="row">
                         <div class="input-field col s12">
                                 <i class="material-icons prefix">subject</i>
-                                <textarea id="Message" class="materialize-textarea" data-length="120"></textarea>
+                                <textarea id="Message" class="materialize-textarea" data-length="120" autocomplete="off"></textarea>
                                 <label for="Message">Message</label>
                         </div>
                 </div>
@@ -41,7 +77,7 @@
                 </div>
                 <div class="row">
                         <div class="input-field col s6">
-                                <a class="waves-effect waves-light btn"><i class="material-icons right">clear</i>
+                                <a class="waves-effect waves-light btn" onclick="resetLocation()"><i class="material-icons right">clear</i>
                                         Reset Location
                                         </a>
                         </div>

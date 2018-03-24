@@ -24,8 +24,14 @@ function hideID(ID){
         console.log("hide "+ID);
 }
 
-function hideLocationScan() {
-
+function getTopicsList(){
+        $.ajax({
+            type: 'POST',
+            url: "topics_data.php",
+        }).done(function(data) {
+                console.log(data)
+                return data;
+        });
 }
 
 function resetLocation(Location_ID){
@@ -38,5 +44,9 @@ function resetLocation(Location_ID){
         }
         }).done(function(data) {
                 console.log(data)
+                showID("LocationScan");
+                document.getElementById("activate_button").checked = false;
+                hideID("Settings");
+
         });
 }
