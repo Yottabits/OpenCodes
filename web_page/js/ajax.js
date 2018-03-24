@@ -23,14 +23,3 @@ function resetLocation(Location_ID){
                 console.log(data)
         });
 }
-
-
-function getMapData(){
-        $.ajax({
-            type: 'POST',
-            url: map_data.php
-        }).done(function(data) {
-                console.log(data[0].State);
-                console.log(data);
-        });
-}
