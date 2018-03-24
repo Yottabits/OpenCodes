@@ -1,6 +1,24 @@
 .custom-center{
     display: flex;
-    align-items: center;
+    text-align: center;
     justify-content: center;
-    margin: 50px;
+    margin-top: 100px;
+}
+
+#footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #efefef;
+  text-align: center;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
 }
