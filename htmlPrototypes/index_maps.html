@@ -12,7 +12,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 
-<body style="display:flex; flex-direction:column;">
+<body>
   <div>
     <nav class="nav-extended">
       <div class="nav-wrapper grey lighten-3">
@@ -26,13 +26,24 @@
     <!-- Additional required wrapper -->
     <div class="swiper-wrapper">
       <!-- Slides -->
-      <div class="swiper-slide">
-        
-
+      <div class="swiper-slide" style="overflow-y: scroll;">
+        <div class="list-item">
+          <div class="card indigo darken-3">
+            <div class="card-content white-text">
+              <span class="card-title"><p id="userName">lonelyMensaEater69</p> - <p id="topic">Backgamon</p>
+              </span>
+              <p id="message">I like backgamon. What about you?</p>
+            </div>
+            <div class="card-action white-text">
+              <p>Seats: </p><p id="seats">3</p>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="swiper-slide">
+        <div class="mapView">
 
-
+        </div>
       </div>
     </div>
     <div class="swiper-scrollbar"></div>
@@ -45,12 +56,12 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.0/js/swiper.min.js"></script>
   <script>
-    var swiper = new Swiper('.swiper-container', {
-      scrollbar: {
-        el: '.swiper-scrollbar',
-        hide: true,
-      },
-    });
+  var swiper = new Swiper('.swiper-container', {
+    scrollbar: {
+      el: '.swiper-scrollbar',
+      hide: true,
+    },
+  });
   </script>
 </body>
 </html>
