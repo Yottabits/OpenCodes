@@ -38,8 +38,6 @@
   <?php
       if(isset($_GET['UrlCode']){
               include 'location_scan.php' ;
-      }elseif (isset($_GET['TV'])) {
-              include 'tv_mode.php';
       }else{
               include 'settings.php';
               include 'map_and_list.php';
