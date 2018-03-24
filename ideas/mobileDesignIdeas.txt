@@ -13,3 +13,7 @@ General structure:
 Needed:
 Settings Page
 List Item
+Tabs (Map, List, Settings)
+Shutdown button in navbar
+Seperated (List, Map) and (Settings) page
+Collection as list item
