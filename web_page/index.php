@@ -36,11 +36,11 @@
 
 
   <?php
-      if(isset($_GET['UrlCode']){
-              include '/location_scan.php' ;
+      if(isset($_GET['UrlCode'])){
+              include 'location_scan.php' ;
       }else{
-              include '/settings.php';
-              include '/map_and_list.php';
+              include 'settings.php';
+              include 'map_and_list.php';
       }
 ?>
 
