@@ -18,6 +18,9 @@ function updatePin(pin){
 
 }
 
-pin0.setAttribute("visibility", "hidden");
+for (i = 0; i < 4; i++){
+    var pin = svgDoc.getElementById("pin" + i);
+    pin.style.display = "none";
+}
 
 svg.style.display = "";
