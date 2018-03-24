@@ -1,26 +1,66 @@
-var svg = document.getElementById("svgContainer");
-var svgDoc = svg.contentDocument;
-var pin0 = svgDoc.getElementById("pin0");
+$( document ).ready(function(){
+    // Some variables we need
+    var svg = document.getElementById("svgContainer");
+    var svgDoc = svg.contentDocument;
 
-//Get the map data from server and update the pins on the map
-function getMapData(){
-    $.ajax({
-        type: 'POST',
-        url: map_data.php
-    }).done(function(data) {
-            console.log(data[0].State);
-            console.log(data);
-    });
-}
+    function hidePin(pinID){
+        var pin = svgDoc.getElementById("pin" + pinID);
+        pin.style.display = "none";
+    }
+    
+    function showGreenPin(pinID){
+        var pin = svgDoc.getElementById("pin" + pinID);
+        pin.style.display = "";
+        pin.style.fill = "green";
+    }
+    
+    function showRedPin(pinID){
+        var pin = svgDoc.getElementById("pin" + pinID);
+        pin.style.display = "";
+        pin.style.fill = "red";
+    }
 
-//update the pins on the map
-function updatePin(pin){
+    function setPinStatus(pinID, statusID){
+        if (statusID == 0) {
+            showGreenPin(pinID);
+        }
+        else if (statusID == 1) {
+            showRedPin(pinID);
+        }
+        else {
+            hidePin(pinID);
+        }
+    }
 
-}
+    // Hide all pins by default
+    for (i = 0; i < 4; i++){
+        hidePin(i);
+    }
+    
+    // Show the svg
+    svg.style.display = "";
 
-for (i = 0; i < 4; i++){
-    var pin = svgDoc.getElementById("pin" + i);
-    pin.style.display = "none";
-}
+    ///////////////////////////////////////////////////////////////////////////
 
-svg.style.display = "";
+    //Get the map data from server and update the pins on the map
+    function getMapData(){
+        $.ajax({
+            type: 'POST',
+            url: "map_data.php"
+        }).done(function(data) {
+                var obj = JSON.parse(data);
+            for(i = 0; i < obj.length; i++) {
+                setPinStatus(i, obj[i].State);
+            }
+        });
+    }
+
+    // Automatically get new data every 5 sec
+    function refresh(){
+        getMapData();
+    }
+
+    getMapData();
+    setInterval(refresh, 5000);
+})
+
