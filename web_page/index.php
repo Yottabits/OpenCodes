@@ -7,7 +7,7 @@
     hello World
     alles wieder gut
     <?php
-    echo "hello World";
+            include 'location_scan.php' ;
     ?>
   </p>
 </body>
