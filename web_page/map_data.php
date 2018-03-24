@@ -28,7 +28,7 @@ while ($row = $result->fetch_array(MYSQLI_BOTH)) {
         echo("<h3>Message: ".$row['Message']."</h3><hr />");
 */
         $row_array['Location_ID'] = $row['ID'];
-        $row_array['Name'] = $row['name'];
+        $row_array['Name'] = $row['Name'];
         $row_array['State'] = $row['States_ID'];
         $row_array['URL_ID'] = $row['URL_ID'];
         $row_array['LastChange'] = $row['LastChange'];

@@ -11,7 +11,6 @@ function activateLocation(Location_ID){
         });
 }
 
-
 function resetLocation(Location_ID){
         $.ajax({
             type: 'POST',
