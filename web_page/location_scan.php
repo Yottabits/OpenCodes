@@ -1,3 +1,4 @@
+<div id="LocationScan", class="fill", style="display:inline">
 <?php
 //check for parameters
  if(isset($_GET['UrlCode'])){
@@ -58,9 +59,11 @@
               </div>
             </div>
           </div>
+        </div>
 <?php
  }else{
         //echo("<h1>No GET UrlCode -> not scanned tag!!</h1> <br>");
         //echo "UrlCode:  ".$_GET['UrlCode']."<br>";
 }
  ?>
+</div>
