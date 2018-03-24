@@ -18,11 +18,13 @@
         </div>
       </div>
       <div class="swiper-slide">
-        <div class="card list-item">
-          <div class="mapView">
-            <object id="svgContainer" type="image/svg+xml" data="/img/map_with_pins.svg" style="display: none;"></object>
-          </div>
-        </div>
+          <div class="list-item">
+                <div class="card">
+                    <div class="mapView">
+                        <object id="svgContainer" type="image/svg+xml" data="/img/map_with_pins.svg" style="display: none;"></object>
+                    </div>
+                </div>
+            </div>
       </div>
     </div>
     <div class="swiper-scrollbar"></div>
