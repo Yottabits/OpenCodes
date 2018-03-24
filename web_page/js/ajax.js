@@ -25,11 +25,12 @@ function resetLocation(Location_ID){
 }
 
 
-function getMapData(Location_ID){
+function getMapData(){
         $.ajax({
             type: 'POST',
             url: map_data.php
         }).done(function(data) {
-                console.log(data)
+                console.log(data[0].State);
+                console.log(data);
         });
 }
