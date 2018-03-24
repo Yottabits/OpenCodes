@@ -34,7 +34,13 @@ body {
   flex-direction:column;
 }
 
-.list-item{
+.list-item {
   margin: 10px;
   box-shadow: 3px 3px 8px #888888;
+}
+
+#svgContainer {
+  padding: 1em;
+  display: block;
+  margin: 0 auto;
 }
