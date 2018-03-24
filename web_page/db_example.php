@@ -13,6 +13,8 @@ if ($conn->connect_error) {
         //echo "Connected successfully";
 }
 
+
+
 $sql = "SELECT * from dk_meet2eat.Locations";
 $result = $conn->query($sql);
 
