@@ -1,0 +1,41 @@
+[{
+        "Location_ID": "0",
+        "Name": null,
+        "State": "0",
+        "URL_ID": "0",
+        "LastChange": "2018-03-24 16:28:16",
+        "FreeSeats": "3",
+        "WhoIsHere": "Max and Friends",
+        "Message": "Hey we are ETECs 7th Semester waiting for new people",
+        "Topic": "Stephen Hawking"
+}, {
+        "Location_ID": "1",
+        "Name": null,
+        "State": "0",
+        "URL_ID": "1",
+        "LastChange": "2018-03-16 13:24:29",
+        "FreeSeats": "6",
+        "WhoIsHere": "Tobi",
+        "Message": "Hey Max",
+        "Topic": "Space X"
+}, {
+        "Location_ID": "2",
+        "Name": null,
+        "State": "0",
+        "URL_ID": "2",
+        "LastChange": "2018-03-08 00:00:00",
+        "FreeSeats": "6",
+        "WhoIsHere": "Nicolas Cage",
+        "Message": "Test",
+        "Topic": "Test"
+}, {
+        "Location_ID": "3",
+        "Name": null,
+        "State": "0",
+        "URL_ID": "3",
+        "LastChange": "2018-03-21 00:00:00",
+        "FreeSeats": "6",
+        "WhoIsHere": "Alice",
+        "Message": "Was Geht",
+        "Topic": "blub"
+}]

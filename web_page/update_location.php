@@ -31,11 +31,23 @@ $WhoIsHere = mysqli_real_escape_string($conn,$WhoIsHere);
 $Message = mysqli_real_escape_string($conn,$Message);
 $FreeSeats = mysqli_real_escape_string($conn,$FreeSeats);
 
+//from where?
+$FromForm = isset($_POST["Location_ID"]) && isset($_POST["Topic"]) && isset( $_POST["WhoIsHere"])&& isset($_POST["Message"])&& isset($_POST["FreeSeats"]);
+$FromActivateButton =  isset($_POST["Location_ID"]) && isset($_POST["FromActivateButton"]);
+$FromReset =  isset($_POST["Location_ID"]) && isset($_POST["Reset"]);
 
-$sql = "UPDATE dk_meet2eat.Locations SET Topic = '$Topic', WhoIsHere='$WhoIsHere', Message='$Message', FreeSeats='$FreeSeats' WHERE ID = '$Location_ID'";
+if ($FromForm) {
+        $sql = "UPDATE dk_meet2eat.Locations SET Topic = '$Topic', WhoIsHere='$WhoIsHere', Message='$Message', FreeSeats='$FreeSeats' WHERE ID = '$Location_ID'";
+}elseif (FromActivateButton) {
+        $sql = "UPDATE dk_meet2eat.Locations SET State = '0' WHERE ID = '$Location_ID'";
+}elseif (FromReset) {
+        $sql = "UPDATE dk_meet2eat.Locations SET State = '2' WHERE ID = '$Location_ID'";
+}
+
 if ($conn->query($sql) === TRUE) {
-    echo "Record updated successfully";
+    echo "     Record updated successfully";
 } else {
     echo "Error updating record: " . $conn->error;
 }
+
  ?>
