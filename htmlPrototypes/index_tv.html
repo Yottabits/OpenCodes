@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.0/css/swiper.min.css">
+  <link href="custom.css" rel="stylesheet">
+
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+
+<body>
+  <div class="row s12" style="width: 100%">
+    <div class="col s8">
+      <div class="card list-item">
+        <div class="mapView">
+          <object id="svgContainer" type="image/svg+xml" data="../web_page/img/map_with_pins.svg" style="width: 100%%; height: 100%;"></object>
+        </div>
+      </div>
+    </div>
+    <div class="col s4">
+      info is here
+    </div>
+  </div>
+  <div class="row s12">
+    <div class="col s12">
+      <p>
+        Meat... Meet new Peeople in your Mensa. More information at www.meet2eat.de
+      </p>
+    </div>
+  </div>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.0/js/swiper.min.js"></script>
+  <script>
+  var swiper = new Swiper('.swiper-container', {
+    scrollbar: {
+      el: '.swiper-scrollbar',
+      hide: true,
+    },
+  });
+  </script>
+</body>
+</html>
