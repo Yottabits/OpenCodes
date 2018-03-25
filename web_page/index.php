@@ -26,7 +26,7 @@
 
 <body>
   <nav>
-    <div class="nav-wrapper grey lighten-3">
+    <div class="nav-wrapper grey darken-2">
       <a href="#!" class="brand-logo left">Logo</a>
       <!--php: If GET detected -->
       <!--<ul class="right">
