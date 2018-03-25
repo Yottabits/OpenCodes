@@ -2,8 +2,8 @@
 
 //Textarea Message Counter and select dropdown menu for seats
 $(document).ready(function() {
-   $('input#input_text, textarea#Message').characterCounter();
-   $('select').formSelect();
+   //$('input#input_text, textarea#Message').characterCounter();
+   //$('select').formSelect();
  });
 
 

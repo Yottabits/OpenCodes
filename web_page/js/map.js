@@ -1,19 +1,32 @@
+$(document).ready(function() {
+    $('#modal1').modal();
+});
+
 $( document ).ready(function(){
     // Some variables we need
     var svg = document.getElementById("svgContainer");
     var svgDoc = svg.contentDocument;
 
+
+    var pinNull = svgDoc.getElementById("pin0");
+        pinNull.onclick = function (e) {
+                console.log("fht pin null");
+                $('#modal0').modal('open')
+            //var instance = M.Modal.getInstance(elem);
+            //instance.open();
+        };
+
     function hidePin(pinID){
         var pin = svgDoc.getElementById("pin" + pinID);
         pin.style.display = "none";
     }
-    
+
     function showGreenPin(pinID){
         var pin = svgDoc.getElementById("pin" + pinID);
         pin.style.display = "";
         pin.style.fill = "green";
     }
-    
+
     function showRedPin(pinID){
         var pin = svgDoc.getElementById("pin" + pinID);
         pin.style.display = "";
@@ -36,7 +49,7 @@ $( document ).ready(function(){
     for (i = 0; i < 4; i++){
         hidePin(i);
     }
-    
+
     // Show the svg
     svg.style.display = "";
 
@@ -64,3 +77,7 @@ $( document ).ready(function(){
     setInterval(refresh, 5000);
 })
 
+function modal(ID){
+        console.log("modal, id = " + ID);
+        svgDoc.getElementById("pin0");
+}
