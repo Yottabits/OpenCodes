@@ -14,7 +14,7 @@
           <div class="list-item">
                 <div class="card">
                     <div class="mapView">
-                        <object id="svgContainer" type="image/svg+xml" data="/img/map_with_pins.svg" style="display: none; background-color:green;"></object>
+                        <object id="svgContainer" type="image/svg+xml" data="/img/map_with_pins.svg" style="display: none;"></object>
 
                     </div>
                 </div>
