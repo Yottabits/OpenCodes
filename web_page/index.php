@@ -26,12 +26,12 @@
     <div class="nav-wrapper grey lighten-3">
       <a href="#!" class="brand-logo left">Logo</a>
       <!--php: If GET detected -->
-      <ul class="right">
-        <!--javascript: Standby button -->
+      <!--<ul class="right">
+
         <li><a class="waves-effect waves-light btn deep-orange lighten-2">Standby</a></li>
-        <!--javascript: Active button -->
+
         <li><a class="waves-effect waves-light btn light-green lighten-2">Active</a></li>
-      </ul>
+        </ul>-->
     </div>
   </nav>
 
@@ -39,17 +39,17 @@
   <?php
       if(isset($_GET['UrlCode'])){
               include 'location_scan.php' ;
-      }else{
               include 'settings.php';
+      }else{
               include 'map_and_list.php';
       }
 ?>
 
-<!--
+
     <div id="footer" class="grey lighten-3">
-      <a id="map-button" class="btn-large waves-effect waves-light deep-orange lighten-2" href="index.php">Show map</a>
+     <!-- <a id="map-button" class="btn-large waves-effect waves-light deep-orange lighten-2" href="index.php">Show map</a>-->
     </div>
-  </div>-->
+
 
 
 

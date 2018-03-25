@@ -34,7 +34,10 @@
         }else {
                 echo("Error wrong UrlCode");
         }
-?>
+
+
+
+        ?>
         <!--php: show at first scan (if new session is started)-->
         <div>
           <div id="activation-field" class="container">

@@ -24,11 +24,19 @@ function hideID(ID){
         console.log("hide "+ID);
 }
 
-function hideLocationScan() {
-
+function getTopicsList(){
+        $.ajax({
+            type: 'POST',
+            url: "topics_data.php",
+        }).done(function(data) {
+                console.log(data)
+                return data;
+        });
 }
 
 function resetLocation(Location_ID){
+        console.log("Called resetLocation");
+        M.toast({html: 'Reset Location, See you soon!<i class="material-icons right">clear</i>'});
         $.ajax({
             type: 'POST',
             url: "update_location.php",
@@ -38,5 +46,9 @@ function resetLocation(Location_ID){
         }
         }).done(function(data) {
                 console.log(data)
+                showID("LocationScan");
+                document.getElementById("activate_button").checked = false;
+                hideID("Settings");
+
         });
 }

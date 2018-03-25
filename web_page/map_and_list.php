@@ -4,18 +4,11 @@
     <div class="swiper-wrapper">
       <!-- Slides -->
       <div class="swiper-slide" style="overflow-y: scroll;">
-        <div class="list-item">
-          <div class="card indigo darken-3">
-            <div class="card-content white-text">
-              <span class="card-title"><p id="userName">lonelyMensaEater69</p> - <p id="topic">Backgamon</p>
-              </span>
-              <p id="message">I like backgamon. What about you?</p>
-            </div>
-            <div class="card-action white-text">
-              <p>Seats: </p><p id="seats">3</p>
-            </div>
-          </div>
-        </div>
+          <!-- Card -->
+        <?php
+            include 'list.php';
+        ?>
+        <!-- End Card -->
       </div>
       <div class="swiper-slide">
           <div class="list-item">

@@ -38,10 +38,11 @@ $FromReset =  isset($_POST["Location_ID"]) && isset($_POST["Reset"]);
 
 if ($FromForm) {
         $sql = "UPDATE dk_meet2eat.Locations SET Topic = '$Topic', WhoIsHere='$WhoIsHere', Message='$Message', FreeSeats='$FreeSeats' WHERE ID = '$Location_ID'";
-}elseif (FromActivateButton) {
+}elseif ($FromActivateButton) {
         $sql = "UPDATE dk_meet2eat.Locations SET States_ID = '0' WHERE ID = '$Location_ID'";
-}elseif (FromReset) {
-        $sql = "UPDATE dk_meet2eat.Locations SET States_ID = '2' WHERE ID = '$Location_ID'";
+}elseif ($FromReset) {
+        $sql = "UPDATE dk_meet2eat.Locations SET States_ID = '2', Topic = 'Not Selected', WhoIsHere='No Personal Data submitted', Message='', FreeSeats='6' WHERE ID = '$Location_ID'";
+        echo "FromReset";
 }
 
 if ($conn->query($sql) === TRUE) {
