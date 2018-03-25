@@ -26,8 +26,13 @@
 
 <body>
   <nav>
-    <div class="nav-wrapper grey darken-2">
-      <a href="#!" class="brand-logo left">Logo</a>
+    <div class="nav-wrapper grey lighten-3">
+      <div id="logo">
+        <img src="/img/logo.png">
+      </div>
+      <div id="tagline">
+        Meet2Eat
+      </div>
       <!--php: If GET detected -->
       <!--<ul class="right">
 
