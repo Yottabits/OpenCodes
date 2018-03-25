@@ -26,12 +26,12 @@
 
 <body>
   <nav>
-    <div class="nav-wrapper grey lighten-3">
+    <div class="nav-wrapper grey darken-3">
       <div id="logo">
         <img src="/img/logo.png">
       </div>
       <div id="tagline">
-        Meet2Eat
+        <h4>Meet2Eat</h4>
       </div>
       <!--php: If GET detected -->
       <!--<ul class="right">
