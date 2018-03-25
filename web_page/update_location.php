@@ -41,7 +41,7 @@ if ($FromForm) {
 }elseif ($FromActivateButton) {
         $sql = "UPDATE dk_meet2eat.Locations SET States_ID = '0' WHERE ID = '$Location_ID'";
 }elseif ($FromReset) {
-        $sql = "UPDATE dk_meet2eat.Locations SET States_ID = '2', Topic = 'Not Selected', WhoIsHere='No Personal Data submitted', Message='', FreeSeats='6' WHERE ID = '$Location_ID'";
+        $sql = "UPDATE dk_meet2eat.Locations SET States_ID = '2', Topic = 'Not Selected', WhoIsHere='Unknown', Message='Nothing to say so far', FreeSeats='6' WHERE ID = '$Location_ID'";
         echo "FromReset";
 }
 

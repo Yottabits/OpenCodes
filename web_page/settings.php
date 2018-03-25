@@ -46,6 +46,29 @@ $(document).ready(function(){
 </script>
 
 
+<?php
+                $sql = "SELECT Topic, Message, WhoIsHere  from dk_meet2eat.Locations WHERE ID='$Location_ID'";
+                $result = $conn->query($sql);
+
+                while ($row = $result->fetch_array(MYSQLI_BOTH)) {
+                     $Topic=$row['Topic'];
+                     $Message=$row['Message'];
+                     $WhoIsHere=$row['WhoIsHere'];
+                }
+
+        if($Topic == "Not Selected"){
+                $Topic="";
+        }
+        if ($Message == "Nothing to say so far") {
+                $Message = "";
+        }
+        if ($WhoIsHere == "Unknown") {
+                $WhoIsHere = "";
+        }
+        //echo "$Topic, $Message, $WhoIsHere";
+    ?>
+
+
 <div class="row" width="100%">
         <div class="col s12">
                 <div class="card  light-blue lighten-5">
@@ -58,22 +81,22 @@ $(document).ready(function(){
                                                 <div class="row">
                                                         <div class="input-field col s12">
                                                                 <i class="material-icons prefix deep-orange-text text-darken-4">forum</i>
-                                                                <input type="text" id="Topic" class="autocomplete black-text" autocomplete="off">
-                                                                <label style="color:black" for="Topic">topic of conversation</label>
+                                                                <input type="text" id="Topic" class="autocomplete black-text" autocomplete="off" value=<?php echo "$Topic"; ?> >
+                                                                <label style="color:black" for="Topic">Topic of conversation:</label>
                                                         </div>
                                                 </div>
                                                 <div class="row">
                                                         <div class="input-field col s12">
                                                                 <i class="material-icons prefix deep-orange-text text-darken-4">supervisor_account</i>
-                                                                <textarea id="WhoIsHere" class="materialize-textarea" data-length="120" autocomplete="off"></textarea>
-                                                                <label style="color:black" for="WhoIsHere">WhoIsHere</label>
+                                                                <textarea id="WhoIsHere" class="materialize-textarea" data-length="120" autocomplete="off"><?php echo "$WhoIsHere";?></textarea>
+                                                                <label style="color:black" for="WhoIsHere">Who is here?</label>
                                                         </div>
                                                 </div>
                                                 <div class="row">
                                                         <div class="input-field col s12">
                                                                 <i class="material-icons prefix deep-orange-text text-darken-4">subject</i>
-                                                                <textarea id="Message" class="materialize-textarea" data-length="120" autocomplete="off"></textarea>
-                                                                <label style="color:black" for="Message">Message</label>
+                                                                <textarea id="Message" class="materialize-textarea" data-length="120" autocomplete="off"><?php echo "$Message";?></textarea>
+                                                                <label style="color:black" for="Message">Leave a Message:</label>
                                                         </div>
                                                 </div>
                                                 <div class="row">
