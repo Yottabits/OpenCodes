@@ -35,6 +35,8 @@ function getTopicsList(){
 }
 
 function resetLocation(Location_ID){
+        console.log("Called resetLocation");
+        M.toast({html: 'Reset Location, See you soon!<i class="material-icons right">clear</i>'});
         $.ajax({
             type: 'POST',
             url: "update_location.php",

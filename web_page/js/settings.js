@@ -35,8 +35,8 @@ $(document).ready(function() {
                 url: $(form).attr('action'),
                 data: formData
         }).done(function(data) {
-                    console.log(data)
-                    M.toast({html: 'Changes Saved!<i class="material-icons right">done</i>'})
+                    console.log(data);
+                    M.toast({html: 'Changes Saved!<i class="material-icons right">done</i>'});
             });
         });
 });
