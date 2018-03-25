@@ -14,7 +14,8 @@
           <div class="list-item">
                 <div class="card">
                     <div class="mapView">
-                        <object id="svgContainer" type="image/svg+xml" data="/img/map_with_pins.svg" style="display: none;"></object>
+                        <object id="svgContainer" type="image/svg+xml" data="/img/map_with_pins.svg" style="display: none; background-color:green;"></object>
+
                     </div>
                 </div>
             </div>
@@ -27,7 +28,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.0/js/swiper.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="/js/map.js"></script>
+
   <script>
   var swiper = new Swiper('.swiper-container', {
     scrollbar: {

@@ -21,15 +21,15 @@ $result = $conn->query($sql);
 while ($row = $result->fetch_array(MYSQLI_BOTH)) {
 
     echo("<div class='list-item'>
-        <div class='card indigo darken-3'>
-            <div class='card-content white-text'>
+        <div class='card light-blue lighten-2'>
+            <div class='card-content' >
                 <span class='card-title'><p id='userName'>".$row['Name']."</p> - <p id='topic'>".$row['Topic']."</p>
                 </span>
                 <p id='message'>".$row['Message']."</p><br />
-                <p id='whoishere'>Awaiting you: ".$row['WhoIsHere']."</p>
+                <p id='whoishere'>Awaiting you:<br>".$row['WhoIsHere']."</p>
             </div>
-            <div class='card-action white-text'>
-                <p>Free Seats: </p><p id='seats'>".$row['FreeSeats']."</p>
+            <div class='card-action'>
+                <p>Seats: </p><p id='seats'>".$row['FreeSeats']."</p>
             </div>
         </div>
     </div>");

@@ -11,24 +11,27 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.0/js/swiper.min.js"></script>
+
+
   <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
 <!--Own JS-->
-  <script src="/js/ajax.js"></script>
-  <script src="/js/settings.js"></script>
-<!--<script src="js/map.js"></script>-->
+  <script src="js/ajax.js"></script>
+  <script src="js/settings.js"></script>
+ <script src="js/map.js"></script>
 
 </head>
 
 <body>
   <nav>
-    <div class="nav-wrapper grey lighten-3">
+    <div class="nav-wrapper grey darken-3">
       <div id="logo">
         <img src="/img/logo.png">
       </div>
       <div id="tagline">
-        Meet2Eat
+        <h4>Meet2Eat</h4>
       </div>
       <!--php: If GET detected -->
       <!--<ul class="right">
@@ -50,11 +53,11 @@
       }
 ?>
 
-
+    <!--
     <div id="footer" class="grey lighten-3">
-     <!-- <a id="map-button" class="btn-large waves-effect waves-light deep-orange lighten-2" href="index.php">Show map</a>-->
+  <a id="map-button" class="btn-large waves-effect waves-light deep-orange lighten-2" href="index.php">Show map</a>
     </div>
-
+-->
 
 
 

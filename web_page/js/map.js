@@ -50,6 +50,7 @@ function glowPin(pinID){
   pin.style.height = "100px";
 }
 
+
 function refresh(){
   getMapData();
 }

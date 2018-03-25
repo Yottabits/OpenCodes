@@ -1,25 +1,36 @@
-<div id="Settings", class="fill", style="display:none">
+<?php
+            $servername = "localhost";
+            $username = "yottabytes";
+            $password = "fFb80*r1";
+
+            // Create connection
+            $conn = new mysqli($servername, $username, $password);
+
+            // Check connection
+            if ($conn->connect_error) {
+                    die("DK hats verkackt: " . $conn->connect_error);
+            }else{
+                    //echo "Connected successfully";
+            }
+
+            $sql = "SELECT * from dk_meet2eat.Locations where ID = '$Location_ID' and States_ID = '2'";
+            $result = $conn->query($sql);
+            if ($row = $result->fetch_array(MYSQLI_BOTH)) {
+                   //location is free
+                   //echo "location is free";
+                   echo "<div id='Settings', class='fill', style='display:none'>";
+           }else{
+                   //echo "location is occupied";
+                   echo "<div id='Settings', class='fill', style='display:inline'>";
+           }
+?>
 
 <script>
 //autocomplete
 $(document).ready(function(){
   $('input.autocomplete').autocomplete({
     data: {
-            <?php
-                        $servername = "localhost";
-                        $username = "yottabytes";
-                        $password = "fFb80*r1";
-
-                        // Create connection
-                        $conn = new mysqli($servername, $username, $password);
-
-                        // Check connection
-                        if ($conn->connect_error) {
-                                die("DK hats verkackt: " . $conn->connect_error);
-                        }else{
-                                //echo "Connected successfully";
-                        }
-
+        <?php
                         $sql = "SELECT * from dk_meet2eat.Topics";
                         $result = $conn->query($sql);
 
@@ -35,10 +46,33 @@ $(document).ready(function(){
 </script>
 
 
+<?php
+                $sql = "SELECT Topic, Message, WhoIsHere  from dk_meet2eat.Locations WHERE ID='$Location_ID'";
+                $result = $conn->query($sql);
+
+                while ($row = $result->fetch_array(MYSQLI_BOTH)) {
+                     $Topic=$row['Topic'];
+                     $Message=$row['Message'];
+                     $WhoIsHere=$row['WhoIsHere'];
+                }
+
+        if($Topic == "Not Selected"){
+                $Topic="";
+        }
+        if ($Message == "Nothing to say so far") {
+                $Message = "";
+        }
+        if ($WhoIsHere == "Unknown") {
+                $WhoIsHere = "";
+        }
+        //echo "$Topic, $Message, $WhoIsHere";
+    ?>
+
+
 <div class="row" width="100%">
         <div class="col s12">
-                <div class="card blue-grey darken-1">
-                        <div class="card-content white-text">
+                <div class="card  light-blue lighten-5">
+                        <div class="card-content">
                                 <span class="card-title">Location Settings</span>
                                 <input type="text" id="LocationIDHiddenInput" value="<?php echo $Location_ID ?>" style="display:none">
                                 <form id="AjaxLocationSettingsForm" method="post" action="update_location.php">
@@ -46,23 +80,23 @@ $(document).ready(function(){
                                         <div class="col s12">
                                                 <div class="row">
                                                         <div class="input-field col s12">
-                                                                <i class="material-icons prefix">forum</i>
-                                                                <input type="text" id="Topic" class="autocomplete" autocomplete="off">
-                                                                <label for="Topic">topic of conversation</label>
+                                                                <i class="material-icons prefix deep-orange-text text-darken-4">forum</i>
+                                                                <input type="text" id="Topic" class="autocomplete black-text" autocomplete="off" value=<?php echo "$Topic"; ?> >
+                                                                <label style="color:black" for="Topic">Topic of conversation:</label>
                                                         </div>
                                                 </div>
                                                 <div class="row">
                                                         <div class="input-field col s12">
-                                                                <i class="material-icons prefix">supervisor_account</i>
-                                                                <textarea id="WhoIsHere" class="materialize-textarea" data-length="120" autocomplete="off"></textarea>
-                                                                <label for="WhoIsHere">WhoIsHere</label>
+                                                                <i class="material-icons prefix deep-orange-text text-darken-4">supervisor_account</i>
+                                                                <textarea id="WhoIsHere" class="materialize-textarea" data-length="120" autocomplete="off"><?php echo "$WhoIsHere";?></textarea>
+                                                                <label style="color:black" for="WhoIsHere">Who is here?</label>
                                                         </div>
                                                 </div>
                                                 <div class="row">
                                                         <div class="input-field col s12">
-                                                                <i class="material-icons prefix">subject</i>
-                                                                <textarea id="Message" class="materialize-textarea" data-length="120" autocomplete="off"></textarea>
-                                                                <label for="Message">Message</label>
+                                                                <i class="material-icons prefix deep-orange-text text-darken-4">subject</i>
+                                                                <textarea id="Message" class="materialize-textarea" data-length="120" autocomplete="off"><?php echo "$Message";?></textarea>
+                                                                <label style="color:black" for="Message">Leave a Message:</label>
                                                         </div>
                                                 </div>
                                                 <div class="row">
@@ -77,17 +111,17 @@ $(document).ready(function(){
                                                               <option value="5">5 Seats</option>
                                                               <option value="6">6 Seats</option>
                                                             </select>
-                                                            <label>Free Seats</label>
+                                                            <label style="color:black">Free Seats</label>
                                                           </div>
                                                 </div>
                                                 <div class="row">
                                                         <div class="input-field col s6">
-                                                                <a class="waves-effect waves-light btn" onclick="resetLocation(<?php echo $Location_ID ?>)"><i class="material-icons right">clear</i>
+                                                                <a class="waves-effect deep-orange waves-light btn" onclick="resetLocation(<?php echo $Location_ID ?>)"><i class="material-icons right">clear</i>
                                                                         Reset Location
                                                                         </a>
                                                         </div>
                                                         <div class="input-field col s6">
-                                                                <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                                                                <button class="btn waves-effect deep-orange  waves-light" type="submit" name="action">Submit
                                                                         <i class="material-icons right">send</i>
                                                                 </button>
                                                         </div>
