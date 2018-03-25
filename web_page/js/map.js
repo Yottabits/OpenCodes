@@ -1,12 +1,7 @@
-$(document).ready(function() {
-    $('#modal1').modal();
-});
-
 $( document ).ready(function(){
     // Some variables we need
     var svg = document.getElementById("svgContainer");
     var svgDoc = svg.contentDocument;
-
 
     var pinNull = svgDoc.getElementById("pin0");
         pinNull.onclick = function (e) {
@@ -76,8 +71,3 @@ $( document ).ready(function(){
     getMapData();
     setInterval(refresh, 5000);
 })
-
-function modal(ID){
-        console.log("modal, id = " + ID);
-        svgDoc.getElementById("pin0");
-}
