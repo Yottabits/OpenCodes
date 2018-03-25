@@ -1,15 +1,8 @@
 $( document ).ready(function(){
+        console.log("hey document ready");
     // Some variables we need
     var svg = document.getElementById("svgContainer");
     var svgDoc = svg.contentDocument;
-
-    var pinNull = svgDoc.getElementById("pin0");
-        pinNull.onclick = function (e) {
-                console.log("fht pin null");
-                $('#modal0').modal('open')
-            //var instance = M.Modal.getInstance(elem);
-            //instance.open();
-        };
 
     function hidePin(pinID){
         var pin = svgDoc.getElementById("pin" + pinID);
@@ -47,7 +40,6 @@ $( document ).ready(function(){
 
     // Show the svg
     svg.style.display = "";
-
     ///////////////////////////////////////////////////////////////////////////
 
     //Get the map data from server and update the pins on the map

@@ -18,8 +18,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
 <!--Own JS-->
-  <script src="/js/ajax.js"></script>
-  <script src="/js/settings.js"></script>
+  <script src="js/ajax.js"></script>
+  <script src="js/settings.js"></script>
  <script src="js/map.js"></script>
 
 </head>

@@ -48,7 +48,7 @@ $(document).ready(function(){
 
 <div class="row" width="100%">
         <div class="col s12">
-                <div class="card  light-blue lighten-2">
+                <div class="card  light-blue lighten-5">
                         <div class="card-content">
                                 <span class="card-title">Location Settings</span>
                                 <input type="text" id="LocationIDHiddenInput" value="<?php echo $Location_ID ?>" style="display:none">
