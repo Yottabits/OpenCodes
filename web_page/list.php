@@ -29,7 +29,7 @@ while ($row = $result->fetch_array(MYSQLI_BOTH)) {
                 <p id='whoishere'>Awaiting you: ".$row['WhoIsHere']."</p>
             </div>
             <div class='card-action white-text'>
-                <p>Seats: </p><p id='seats'>".$row['FreeSeats']."</p>
+                <p>Free Seats: </p><p id='seats'>".$row['FreeSeats']."</p>
             </div>
         </div>
     </div>");
