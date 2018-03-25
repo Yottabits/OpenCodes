@@ -1,4 +1,4 @@
-<div id="LocationScan", class="fill", style="display:inline">
+
 <?php
 //check for parameters
  if(isset($_GET['UrlCode'])){
@@ -35,7 +35,16 @@
                 echo("Error wrong UrlCode");
         }
 
-
+        $sql = "SELECT * from dk_meet2eat.Locations where ID = '$Location_ID' and States_ID = '2'";
+        $result = $conn->query($sql);
+        if ($row = $result->fetch_array(MYSQLI_BOTH)) {
+               //location is free
+               //echo "location is free";
+               echo "<div id='LocationScan', class='fill', style='display:inline'>";
+       }else{
+               //echo "location is occupied";
+               echo "<div id='LocationScan', class='fill', style='display:none'>";
+       }
 
         ?>
         <!--php: show at first scan (if new session is started)-->

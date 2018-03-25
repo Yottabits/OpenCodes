@@ -1,25 +1,36 @@
-<div id="Settings", class="fill", style="display:none">
+<?php
+            $servername = "localhost";
+            $username = "yottabytes";
+            $password = "fFb80*r1";
+
+            // Create connection
+            $conn = new mysqli($servername, $username, $password);
+
+            // Check connection
+            if ($conn->connect_error) {
+                    die("DK hats verkackt: " . $conn->connect_error);
+            }else{
+                    //echo "Connected successfully";
+            }
+
+            $sql = "SELECT * from dk_meet2eat.Locations where ID = '$Location_ID' and States_ID = '2'";
+            $result = $conn->query($sql);
+            if ($row = $result->fetch_array(MYSQLI_BOTH)) {
+                   //location is free
+                   //echo "location is free";
+                   echo "<div id='Settings', class='fill', style='display:none'>";
+           }else{
+                   //echo "location is occupied";
+                   echo "<div id='Settings', class='fill', style='display:inline'>";
+           }
+?>
 
 <script>
 //autocomplete
 $(document).ready(function(){
   $('input.autocomplete').autocomplete({
     data: {
-            <?php
-                        $servername = "localhost";
-                        $username = "yottabytes";
-                        $password = "fFb80*r1";
-
-                        // Create connection
-                        $conn = new mysqli($servername, $username, $password);
-
-                        // Check connection
-                        if ($conn->connect_error) {
-                                die("DK hats verkackt: " . $conn->connect_error);
-                        }else{
-                                //echo "Connected successfully";
-                        }
-
+        <?php
                         $sql = "SELECT * from dk_meet2eat.Topics";
                         $result = $conn->query($sql);
 
