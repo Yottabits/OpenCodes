@@ -15,8 +15,12 @@
   text-align: center;
 }
 
-p {
+p, h1, h2, h3{
   display: inline;
+}
+
+h2{
+  margin-bottom: 1.5em;
 }
 
 .fill{
