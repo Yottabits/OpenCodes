@@ -28,21 +28,25 @@
 <script>
 //autocomplete
 $(document).ready(function(){
-  $('input.autocomplete').autocomplete({
-    data: {
-        <?php
-                        $sql = "SELECT * from dk_meet2eat.Topics";
-                        $result = $conn->query($sql);
+                //Counter Textfeld und Form initialisierung
+                $('input#input_text, textarea#Message').characterCounter();
+                $('select').formSelect();
 
-                        while ($row = $result->fetch_array(MYSQLI_BOTH)) {
-                               //Example "Apple": null,
-                                echo("\"".$row['Name']."\":null,");
-                        }
+                $('input.autocomplete').autocomplete({
+                  data: {
+                          <?php
+                                          $sql = "SELECT * from dk_meet2eat.Topics";
+                                          $result = $conn->query($sql);
 
-            ?>
-      },
-  });
-});
+                                          while ($row = $result->fetch_array(MYSQLI_BOTH)) {
+                                                 //Example "Apple": null,
+                                                  echo("\"".$row['Name']."\":null,");
+                                          }
+
+                              ?>
+                    },
+                });
+        });
 </script>
 
 
